@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--font awsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Fav Icon -->
+    <link rel="shortcut icon" href="../img/logo-initials.png">
+    <!-- Style -->
+    <link rel="stylesheet" href="../css/style.css">
+    <title>ClickUp News | Login</title>
+  </head>
+  <body class="page-template">
+
+    <header>
+    <!--NAVIGATION-->
+      <div class="logo">
+        <h1 class="logo-text"><a href="../index.html"><span>Click</span>Up</a></h1>      
+        <!--<ul class="language">
+          <li><a href="index.html"><img src="img/eng-flag.png"></a>
+            <ul>
+              <li><a href="#"><img src="img/est-flag.png"></a></li>
+              <li><a href="#"><img src="img/rus-flag.jpg"></a></li>
+            </ul>
+          </li>
+        </ul>-->
+      </div>
+      <i class="fa fa-bars menu-toggle"></i>
+      <ul class="nav">
+        <li><a href="../index.html">HOME</a></li>
+        <li><a href="#">POLITICS</a></li>
+        <li><a href="#">SPORTS</a></li>
+        <li><a href="#">LIVE</a></li>
+        <li><a href="#">CORONA VIRUS</a></li>
+        <li><a href="#">CONTACT</a></li>
+        <!-- <li><a href="#">SIGN-UP</a></li>
+          <li><a href="#">LOGIN</a></li>
+      -->
+        <li>
+          <a href="#">
+            <i class="fa fa-user"></i>
+            UTHMAN
+            <i class="fa fa-chevron-down" style="font-size: .8em;"></i>
+          </a>
+          <ul>
+              <ul>
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="#" class="logout">Logout</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+    <!--END OF NAVIGATION-->
+    </header>
+
+    <!-- login Form -->
+    <div class="auth-content">
+      <form action="login.html" method="post">
+        <h2 class="form-title">Login</h2>
+
+        <div>
+          <label>Username</label>
+          <input type="text" name="username" class="text-input">
+        </div>
+        <div>
+          <label>Password</label>
+          <input type="password" name="password" class="text-input">
+        </div>
+        <div>
+          <button type="submit" name="login-btn" class="btn btn-big">Login</button>
+        </div>
+        <p>Or <a href="register.html">Sign Up</a></p>
+      </form>
+    </div>
+   
+  <!--JQUERY -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  <!--CUSTOM SCRIPT-->
+    <script src="../js/script.js"></script>
+
+  </body>
+</html>
