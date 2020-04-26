@@ -1,4 +1,7 @@
-<?php include ("../../path.php"); ?>
+<?php 
+include ("../../path.php"); 
+include (ROOT_PATH . "/app/database/db.php");
+?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -24,6 +27,10 @@
       <form action="login.php" method="post">
         <h2 class="form-title">Login</h2>
 
+        <!-- Error Messages -->
+        <?php include (ROOT_PATH . "/app/helpers/formErrors.php"); ?>
+        <!-- End Of Error Messages -->
+        
         <div>
           <label>Username</label>
           <input type="text" name="username" class="text-input">

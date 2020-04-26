@@ -19,23 +19,28 @@
         <li><a href="#">LIVE</a></li>
         <li><a href="#">CORONA VIRUS</a></li>
         <li><a href="#">CONTACT</a></li>
-        <!-- <li><a href="assets/pages/register.php">SIGN-UP</a></li>
-          <li><a href="#">LOGIN</a></li>
-      -->
-        <li>
-          <a href="#">
-            <i class="fa fa-user"></i>
-            UTHMAN
-            <i class="fa fa-chevron-down" style="font-size: .8em;"></i>
-          </a>
-          <ul>
-              <ul>
-                <li><a href="admin/posts/index.php">Dashboard</a></li>
-                <li><a href="#" class="logout">Logout</a></li>
-              </ul>
-            </li>
-          </ul>
-        </li>
+
+        <?php if (isset($_SESSION['id'])): ?>
+          <li>
+            <a href="#">
+              <i class="fa fa-user"></i>
+              <?php echo $_SESSION['username']; ?>
+              <i class="fa fa-chevron-down" style="font-size: .8em;"></i>
+            </a>
+            <ul>
+                <ul>
+                  <?php if($_SESSION['admin']): ?>
+                    <li><a href="<?php echo BASE_URL . '/assets/admin/dashboard.php' ?>">Dashboard</a></li>
+                  <?php endif; ?>
+                  <li><a href="#" class="logout">Logout</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        <?php else: ?>
+          <li><a href="<?php echo BASE_URL . '/assets/pages/register.php' ?>">SIGN-UP</a></li>
+          <li><a href="<?php echo BASE_URL . '/assets/pages/login.php' ?>">LOGIN</a></li>
+        <?php endif; ?>   
       </ul>  
 </header>
 <!--END OF NAVIGATION-->
