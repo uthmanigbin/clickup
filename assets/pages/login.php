@@ -1,6 +1,6 @@
 <?php 
 include ("../../path.php"); 
-include (ROOT_PATH . "/app/database/db.php");
+include (ROOT_PATH . "/app/controllers/users.php");
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -33,11 +33,11 @@ include (ROOT_PATH . "/app/database/db.php");
         
         <div>
           <label>Username</label>
-          <input type="text" name="username" class="text-input">
+          <input type="text" name="username" value="<?php echo $username; ?>" class="text-input">
         </div>
         <div>
           <label>Password</label>
-          <input type="password" name="password" class="text-input">
+          <input type="password" name="password" value="<?php echo $password; ?>" class="text-input">
         </div>
         <div>
           <button type="submit" name="login-btn" class="btn btn-big">Login</button>
